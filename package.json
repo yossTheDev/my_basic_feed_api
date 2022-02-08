@@ -1,15 +1,11 @@
 {
   "name": "node_api",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple api for the feed cuba app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "test2": "node src/index.js",
-    "build": "tsc",
     "dev": "nodemon src/index.js",
     "start": "node src/index.js",
-    "start-dev": "nodemon –ext ts –exec ts-node –delay 3 ./src/server.ts",
     "prod": "npm run build &amp;&amp; npm run start"
   },
   "keywords": [],
@@ -28,7 +24,6 @@
   "engines": {
     "node": "16.x"
   },
-
 
   "devDependencies": {
     "nodemon": "^2.0.15"
