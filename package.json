@@ -1,0 +1,29 @@
+{
+  "name": "node_api",
+  "version": "1.0.0",
+  "description": "Simple api for the feed cuba app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test2": "node src/index.js",
+    "build": "tsc",
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "start-dev": "nodemon –ext ts –exec ts-node –delay 3 ./src/server.ts",
+    "prod": "npm run build &amp;&amp; npm run start"
+  },
+  "keywords": [],
+  "author": "Yoannis Sanchez Soto",
+  "license": "MIT",
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "axios": "^0.25.0",
+    "body-parser": "^1.19.1",
+    "cheerio": "^1.0.0-rc.10",
+    "express": "^4.17.2",
+    "feed-reader": "^5.0.0-rc3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
