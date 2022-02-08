@@ -107,7 +107,7 @@ router.get("/",async (req, res) => {
 
                "Cubadebate" : await GetFeedData(res,"http://www.cubadebate.cu/feed/"),
                "Trabajadores" : await GetFeedData(res,"http://www.trabajadores.cu/rss"),
-               "Granma" : await GetFeedData(res,"http://www.granma.cu/feed"),
+               //"Granma" : await GetFeedData(res,"http://www.granma.cu/feed"),
    })
    }catch (error){
        res.status(400).json(
