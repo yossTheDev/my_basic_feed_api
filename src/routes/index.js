@@ -20,7 +20,6 @@ function Entry(title,imageUrls,link,description,published) {
     this.published = published;
 }
 
-
 //Get all image urls from article link
 async function GetImageUrlsFromLink(url){
 
@@ -97,16 +96,19 @@ async function GetFeedData(res,url){
     }
 }
 
-//basic scraping
+//Get the data of the RSS sources
 router.get("/",async (req, res) => {
    try {
        res.json(
            {
-               "Cubadebate" : await GetFeedData(res,"http://localhost/Copiafeed.xml"),
+               /*"Cubadebate" : await GetFeedData(res,"http://localhost/Copiafeed.xml"),
                "Trabajadores" : await GetFeedData(res,"http://localhost/Copiafeed.xml"),
-               "Granma" : await GetFeedData(res,"http://localhost/Copiafeed.xml"),
+               "Granma" : await GetFeedData(res,"http://localhost/Copiafeed.xml"),*/
 
-           })
+               "Cubadebate" : await GetFeedData(res,"http://www.cubadebate.cu/feed/"),
+              // "Trabajadores" : await GetFeedData(res,"http://www.trabajadores.cu/rss"),
+              // "Granma" : await GetFeedData(res,"http://www.granma.cu/feed"),
+   })
    }catch (error){
        res.status(400).json(
            {
