@@ -101,12 +101,12 @@ router.get("/",async (req, res) => {
    try {
        res.json(
            {
-               /*"Cubadebate" : await GetFeedData(res,"http://localhost/Copiafeed.xml"),
-               "Trabajadores" : await GetFeedData(res,"http://localhost/Copiafeed.xml"),
+               "Cubadebate" : await GetFeedData(res,"http://localhost/Copiafeed.xml"),
+               /*"Trabajadores" : await GetFeedData(res,"http://localhost/Copiafeed.xml"),
                "Granma" : await GetFeedData(res,"http://localhost/Copiafeed.xml"),*/
 
-               "Cubadebate" : await GetFeedData(res,"http://www.cubadebate.cu/feed/"),
-               "Trabajadores" : await GetFeedData(res,"http://www.trabajadores.cu/rss"),
+               //"Cubadebate" : await GetFeedData(res,"http://www.cubadebate.cu/feed/"),
+               //"Trabajadores" : await GetFeedData(res,"http://www.trabajadores.cu/rss"),
                //"Granma" : await GetFeedData(res,"http://www.granma.cu/feed"),
    })
    }catch (error){
