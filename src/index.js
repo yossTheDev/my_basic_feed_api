@@ -1,5 +1,4 @@
 const express = require("express");
-const Console = require("console");
 const app = express();
 
 //Configs
@@ -11,6 +10,7 @@ app.set("json spaces",2);
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(require(`./routes/index`));
+app.use(require(`./routes/getfeed`));
 
 
 //Initializing server and listening port

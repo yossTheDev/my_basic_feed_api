@@ -18,13 +18,12 @@
     "cheerio": "^1.0.0-rc.10",
     "express": "^4.17.2",
     "feed-reader": "^5.0.0-rc3",
-    "feedparser": "^2.2.10"
+    "feedparser": "^2.2.10",
+    "node-fetch": "^2.6.7"
   },
-
   "engines": {
     "node": "16.x"
   },
-
   "devDependencies": {
     "nodemon": "^2.0.15"
   }
