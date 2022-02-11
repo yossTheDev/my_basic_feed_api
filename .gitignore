@@ -3,3 +3,6 @@ npm-debug.log
 .DS_Store
 /*.env
 /http_requests
+/.deta
+/.idea
+secret.txt

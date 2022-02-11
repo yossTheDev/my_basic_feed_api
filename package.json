@@ -1,11 +1,11 @@
 {
   "name": "node_api",
   "version": "0.1.1",
-  "description": "Simple api for the feed cuba app",
+  "description": "Simple Feed Api",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js",
-    "start": "node src/index.js",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
     "prod": "npm run build &amp;&amp; npm run start"
   },
   "keywords": [],

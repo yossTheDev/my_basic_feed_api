@@ -33,7 +33,7 @@ async function GetImageUrlsFromLink(url){
         const $ = cheerio.load(response.data); //Load data of the html page
 
         //Get the meta map
-        const metaMap = $('html').map((_,el)=>
+        $('html').map((_,el)=>
             {
                 //Find all meta tags
                 el = $(el);
@@ -47,7 +47,6 @@ async function GetImageUrlsFromLink(url){
                 }
             }
         ).get();
-
         //Return the images in an array
         return imageUrls;
 
@@ -59,7 +58,7 @@ async function GetImageUrlsFromLink(url){
 }
 
 //Get feed data and the articles
-function GetData(url,response){
+function GetData(url,img,response){
     let feed = new FeedParser(); //Initializing new feed parse instance
     let items = []; //This is the result of all entries in the feed
     let feedData = new FeedData(); //This is the basic information of the feed
@@ -115,9 +114,13 @@ function GetData(url,response){
     //In this event take all processed data and sent to the user
     feed.on("end",async function () {
         //Get all images for the articles
-        for (let i = 0; i < items.length; i++) {
-            items[i].image = await GetImageUrlsFromLink(items[i].link);
+        if(img === "true")
+        {
+            for (let i = 0; i < items.length; i++) {
+                items[i].image = await GetImageUrlsFromLink(items[i].link);
+            }
         }
+
 
         //Send Response
         response.json(
