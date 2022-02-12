@@ -46,7 +46,4 @@ Example response:
 }
 ```
 
-#Try
-[![Deploy](https://button.deta.dev/1/svg)](https://go.deta.dev/deploy?repo=https://github.com/yossTheDev/my_basic_feed_api.git)
-
 © Made by YOSS - Yoannis Sánchez Soto © 
