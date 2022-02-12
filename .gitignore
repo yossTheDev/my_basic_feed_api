@@ -4,5 +4,6 @@ npm-debug.log
 /*.env
 /http_requests
 /.deta
-/.idea
+/.idea/
+/.idea/httpRequests
 secret.txt
