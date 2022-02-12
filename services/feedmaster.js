@@ -12,12 +12,13 @@ function FeedData(title, link, description, entries, image){
     this.image = image;
 }
 //Entry object with the basic information of an article
-function Entry(title,imageUrls,link,description,published) {
+function Entry(title,imageUrls,link,description,published,categories) {
     this.title = title;
     this.imageUrls = imageUrls;
     this.link = link;
     this.description = description;
     this.published = published;
+    this.categories = categories;
 }
 
 //Get all image urls from article link
@@ -100,6 +101,7 @@ function GetData(url,img,response){
             newItem.description = item.description; //Add the description
             newItem.published = item.date; //Add the date time
             newItem.link = item.link //Add the link
+            newItem.categories = item.categories;
             //Adding in our items collection
             items.push(newItem);
         }
